@@ -1,0 +1,114 @@
+hydra:
+  run:
+    dir: outputs/qa_inference/${dataset.data_name}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+defaults:
+  - _self_
+  - doc_ranker: idf_topk_ranker
+  - qa_prompt: mmqa
+  - qa_evaluator: em_f1
+  - micro_matcher: simgrag_matcher
+  - text_emb_model: mpnet
+
+seed: 1024
+
+dataset:
+  root: ./data
+  data_name: mmqa_test
+  force_rebuild: false
+
+llm:
+  _target_: gfmrag.llms.ChatGPT
+  model_name_or_path: gpt-3.5-turbo
+  retry: 5
+
+graph_retriever:
+  model_path: rmanluo/GFM-RAG-8M # off-the-shelf GFM retriever (used in the paper); or a local stage2 output dir
+
+test:
+  retrieval_batch_size: 8
+  top_k: 5
+  save_retrieval: False
+  save_top_k_entity: 10
+  n_threads: 5
+  retrieved_result_path: null
+  prediction_result_path: null
+  retrieval_only: false
+  init_entities_weight: True
+  scienceqa_export_macro_only: false # export macro top-k ranking only (ScienceQA two-command flow)
+  scienceqa_macro_top_k: 200
+
+pattern_activation:
+  enable: false
+  micro_match_topk: 20
+  max_match_score: 10.0
+  min_match_score: 0.0
+  node_doc_score_enable: true
+  node_doc_weight: 1.0
+  node_anchor_source: question_entities
+  node_doc_match_topk: 30
+  node_doc_max_distance: 1.0
+  node_doc_anchor_min_tokens: 1
+  node_doc_anchor_min_chars: 4
+  node_doc_include_tail_nodes: false
+  cross_tier_path: null
+  micro_kg_path: null
+  debug_first_n: 0
+  debug_include_query: false
+
+image_fusion:
+  enable: true
+  enable_micro_score: true
+  non_candidate_scale: 0.333333
+
+path_relation:
+  enable: false
+  score_field: viterbi_score
+  max_neighbors_per_doc: 5
+  max_evidence_per_neighbor: 3
+  bridge_max_window: 2
+  bridge_decay: 0.4
+  decode: viterbi
+  # larger values may improve path quality but increase stage3 runtime.
+  target_topk: 20
+  target_selection_mode: mixed
+  target_score_topk: 20
+  target_mass_topk: 20
+  paths_per_target: 2
+  tau_flow: 1.0
+  flow_eps: 1.0e-12
+
+final_generation:
+  pictures_root: ${dataset.root}/${dataset.data_name}/pictures
+  tables_image_root: ${dataset.root}/${dataset.data_name}/tables
+  table_image_extensions: [png, jpg, jpeg, webp]
+  max_images: 6 # image-doc cap in final retrieved_docs (table docs not capped)
+  max_images_score_file: null # optional precomputed per-question max_images jsonl (skips the inline classifier)
+  qwen_vl:
+    model_name_or_path: Qwen/Qwen3-VL-8B-Instruct
+    tensor_parallel_size: 1
+    gpu_memory_utilization: 0.92
+    max_num_batched_tokens: 32768
+    max_model_len: 32768
+    allowed_local_media_path: null
+    max_tokens: 512
+
+  visual_budget:
+    enable: false
+    prompt_config: null # null = auto-selected from dataset.data_name (mmqa/webqa)
+    examples_file: null # null = auto-selected from dataset.data_name
+    batch_size: 8
+    max_tokens: 8
+    cache_file: null # Defaults to <hydra output dir>/visual_budget_scores.jsonl
+
+# Qwen3-VL final answer generation on top of prediction.jsonl.
+# Works with test.retrieval_only=true.
+final_eval:
+  enable: false
+  path_select: false
+  top_k: 5
+  max_images: 5
+  max_path_links: 1
+  max_tokens: 128
+  judge_max_tokens: 32
+  output_file: null # default <hydra output dir>/final_answers.jsonl

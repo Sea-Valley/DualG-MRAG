@@ -1,0 +1,15 @@
+allowed_labels: ["0", "5"]
+category_labels:
+  no_image: "0"
+  image_only: "5"
+category_order: [image_only, no_image]
+few_shot:
+  image_only: 8
+  no_image: 8
+prompt_prefix: |-
+  You are a WebQA question classifier. Decide whether answering the question requires image evidence. The output label must be one of 0, 5.
+  Label definitions:
+  0 = only needs text evidence (no image needed)
+  5 = only needs image evidence
+  If a question involves both image and text, classify it as 5 as well.
+  You must output exactly one character: 0 or 5. Do not output anything else.

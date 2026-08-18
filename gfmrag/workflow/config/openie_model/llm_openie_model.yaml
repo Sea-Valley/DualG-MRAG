@@ -1,0 +1,5 @@
+_target_: gfmrag.kg_construction.openie_model.LLMOPENIEModel
+llm_api: qwen_vl_vllm
+model_name: Qwen/Qwen3-VL-8B-Instruct
+max_ner_tokens: 300
+max_triples_tokens: 4096

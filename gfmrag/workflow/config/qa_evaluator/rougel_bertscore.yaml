@@ -1,0 +1,5 @@
+_target_: gfmrag.evaluation.rougel_bertscore_evaluator.RougeLBertscoreEvaluator
+model_type: roberta-large
+num_layers: null
+device: null
+batch_size: 64

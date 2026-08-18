@@ -1,0 +1,697 @@
+{
+  "input_file": "MultimodalQA train split (official release, multimodalqa_final_dataset_pipeline_camera_ready_MMQA_train.jsonl)",
+  "requested_per_category": 10,
+  "random_sample": true,
+  "seed": 42,
+  "stats": {
+    "total_lines_scanned": 23817,
+    "valid_json_samples_seen": 23817,
+    "pool_counts": {
+      "image_only": 3558,
+      "image_and_others": 4571,
+      "no_image": 15688
+    },
+    "collected_counts": {
+      "image_only": 10,
+      "image_and_others": 10,
+      "no_image": 10
+    }
+  },
+  "categories": {
+    "image_only": [
+      {
+        "dataset_index": 14804,
+        "qid": "2bc37c771ab1b06c1fd3cded4a65fd22",
+        "question": "What kind of trees are on this advertisement for Death in Paradis (TV series)?",
+        "answers": [
+          "palm"
+        ],
+        "supporting_parts": [
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "283f5203c6df79bff35e4c8003fdcb09",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "ImageQ"
+      },
+      {
+        "dataset_index": 2708,
+        "qid": "9b3b17a03b72c4d6cf5112539c76251a",
+        "question": "Is Mangalia located next to a body of water?",
+        "answers": [
+          "yes"
+        ],
+        "supporting_parts": [
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "a24e7f59e4a5c5d16d2513ade3cfd232",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "ImageQ"
+      },
+      {
+        "dataset_index": 574,
+        "qid": "5b1d910b4b7c77fe1518e487acec2bac",
+        "question": "What color is the background of Lindsey Wilson College's logo?",
+        "answers": [
+          "blue"
+        ],
+        "supporting_parts": [
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "9a55b55bed5e334897519910d58e642d",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "ImageQ"
+      },
+      {
+        "dataset_index": 17660,
+        "qid": "b7c0f53d2de12b0cc92347adbaa19d10",
+        "question": "Which active light combat aircrafts feature a small refueling probe shaped like a hockey stick that sticks out in front of the cockpit canopy?",
+        "answers": [
+          "British Aerospace Hawk 200",
+          "Aermacchi MB-339"
+        ],
+        "supporting_parts": [
+          "image",
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "feef2543da546c01a112a19e73b1d860",
+            "doc_part": "image"
+          },
+          {
+            "doc_id": "249e0f92effc6110ee0e268987187b03",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "ImageListQ"
+      },
+      {
+        "dataset_index": 6758,
+        "qid": "145c1a52e39c3bc16b1c9a0deaf76f0d",
+        "question": "What natural feature is behind Reno, Nevada?",
+        "answers": [
+          "mountains"
+        ],
+        "supporting_parts": [
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "a76477f573ecd5175825e6773a2da15d",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "ImageQ"
+      },
+      {
+        "dataset_index": 6174,
+        "qid": "05ba39bbfb207db9e829e564055d64cf",
+        "question": "How many different colored stripes are on the flag for the Indian National Congress?",
+        "answers": [
+          "three"
+        ],
+        "supporting_parts": [
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "062518e869e2cef376d290792b6c5f51",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "ImageQ"
+      },
+      {
+        "dataset_index": 5616,
+        "qid": "2f135e433b565c54bbea2ace86b5d588",
+        "question": "Water fountains can be found in which location among the Former affiliate members of Missouri Valley Conference?",
+        "answers": [
+          "University Park, Texas",
+          "Bowling Green, Kentucky"
+        ],
+        "supporting_parts": [
+          "image",
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "4fb6b736abe140d598806357572c5f78",
+            "doc_part": "image"
+          },
+          {
+            "doc_id": "3fb17fc229645a7f84dba38257675cca",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "ImageListQ"
+      },
+      {
+        "dataset_index": 3421,
+        "qid": "5f3935acf1a65887358e2a27a82793bc",
+        "question": "Which Title(s), in Television roles of Fátima Molina, has three young women on its poster?",
+        "answers": [
+          "Tres Milagros (Mexican TV series)"
+        ],
+        "supporting_parts": [
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "a4d167bd233f33c94de22be33b02ec9c",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "ImageListQ"
+      },
+      {
+        "dataset_index": 17517,
+        "qid": "e45fe249a28d2caf39d27541ae3ae7c3",
+        "question": "Of the away teams that are listed in the results of Round 7, in the NRL's 2014 season, which has a logo featuring a horse?",
+        "answers": [
+          "Brisbane Broncos"
+        ],
+        "supporting_parts": [
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "b31aaebff557f0fd3ed4e83c59f8409d",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "ImageListQ"
+      },
+      {
+        "dataset_index": 2469,
+        "qid": "4581d5ffb2cefe1754dbfe0f1296e06b",
+        "question": "In Istanbul, what color is the bottom half of the trolley?",
+        "answers": [
+          "red"
+        ],
+        "supporting_parts": [
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "25d2bb5dbcd129c4eaede8374cab21fe",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "ImageQ"
+      }
+    ],
+    "image_and_others": [
+      {
+        "dataset_index": 23164,
+        "qid": "10699af742d7a8ce6ecf82ff207e4527",
+        "question": "What driver is associated with the Force India-Mercedes constructors in the 2013 Australian Grand Prix and can be seen wearing a white hat?",
+        "answers": [
+          "Adrian Sutil"
+        ],
+        "supporting_parts": [
+          "table",
+          "image",
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "e5c33450cb6f45345f78db6f6deec7ae",
+            "doc_part": "table"
+          },
+          {
+            "doc_id": "ecc797ecdc1cc6f36852dc924b3b4b91",
+            "doc_part": "image"
+          },
+          {
+            "doc_id": "666ad9395177f93fad0e4bf9b27441f1",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "Intersect(ImageListQ,TableQ)"
+      },
+      {
+        "dataset_index": 4257,
+        "qid": "2e440900a195c2256fcbc940bbd0bc4b",
+        "question": "What film that Samira Koppikar was co-singer on has more than one person on the cover?",
+        "answers": [
+          "Bareilly Ki Barfi",
+          "Dobaara: See Your Evil",
+          "Ishq Click"
+        ],
+        "supporting_parts": [
+          "table",
+          "image",
+          "image",
+          "image",
+          "image",
+          "image",
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "17ceec4551b0bb0b492371afa3f6a85a",
+            "doc_part": "table"
+          },
+          {
+            "doc_id": "fcdf102b098cce5d4e54bbd12c4ddee2",
+            "doc_part": "image"
+          },
+          {
+            "doc_id": "fa566d7c5e7b8af6fcf2bb878c0f9c99",
+            "doc_part": "image"
+          },
+          {
+            "doc_id": "a4a756320ed5d7ec9809d1d6b9a64673",
+            "doc_part": "image"
+          },
+          {
+            "doc_id": "6940851898580333f4b01abede86d9b0",
+            "doc_part": "image"
+          },
+          {
+            "doc_id": "0b76db9d4aa9905862fe4cc4dddc03c3",
+            "doc_part": "image"
+          },
+          {
+            "doc_id": "f2b20f2d2a731b0ddc96f4ba14c71cfb",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "Intersect(ImageListQ,TableQ)"
+      },
+      {
+        "dataset_index": 18641,
+        "qid": "986d943415c465406a0f28d206f8cdf7",
+        "question": "What was the to par score in the third round of the 1913 U.S. Open when the player has a mustache?",
+        "answers": [
+          "+11"
+        ],
+        "supporting_parts": [
+          "table",
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "2d40978681818fc6536aff5a92c53d0c",
+            "doc_part": "table"
+          },
+          {
+            "doc_id": "fb93ca5c56be8d734206037a9acc9910",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "Compose(TableQ,ImageListQ)"
+      },
+      {
+        "dataset_index": 1578,
+        "qid": "da9b83ac0537eb6db15d049990ff0f6f",
+        "question": "What is the value of the import trading partner of Canada that has a flag featuring stars of different sizes?",
+        "answers": [
+          "$54.7 billion"
+        ],
+        "supporting_parts": [
+          "table",
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "945585f00d66cb4bfe1543538a1fad7b",
+            "doc_part": "table"
+          },
+          {
+            "doc_id": "87c28a1e54f7d4e6a3336477ffcabd15",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "Compose(TableQ,ImageListQ)"
+      },
+      {
+        "dataset_index": 1472,
+        "qid": "c327a69c2fa928e632ec6ae0830eb79b",
+        "question": "Did the player of African American descent or the player that has scored the most Premier League goals have more assists in 1994-95 FA Premier League Top assists?",
+        "answers": [
+          "Alan Shearer"
+        ],
+        "supporting_parts": [
+          "text",
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "467670099fdb293c8e2f03fdf694d9a9",
+            "doc_part": "text"
+          },
+          {
+            "doc_id": "51ce182aaa58cf5fb17970ed3125e5c9",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "Compare(Compose(TableQ,ImageQ),Compose(TableQ,TextQ))"
+      },
+      {
+        "dataset_index": 4597,
+        "qid": "bf5d6c2088bcee0d8308b9d098dc87b9",
+        "question": "The arena where the Tour of Secret concert happened on March 11, 2007 has what color traffic light outside it?",
+        "answers": [
+          "red"
+        ],
+        "supporting_parts": [
+          "table",
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "caded23813d6c54f89def356768b7a9f",
+            "doc_part": "table"
+          },
+          {
+            "doc_id": "07e6a40f1ca3dde41aa2d92fb624c6d0",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "Compose(ImageQ,TableQ)"
+      },
+      {
+        "dataset_index": 10901,
+        "qid": "b7726a8516eee0a63746074f33c2257b",
+        "question": "Elektra Natchois was played by Meghana Erande in the film with what weather activity on the poster?",
+        "answers": [
+          "rain"
+        ],
+        "supporting_parts": [
+          "table",
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "c45d2a4a57c6cdabaaf7cee0902033e0",
+            "doc_part": "table"
+          },
+          {
+            "doc_id": "a06ca5e1c060942d4b736454ac875bf3",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "Compose(ImageQ,TableQ)"
+      },
+      {
+        "dataset_index": 11418,
+        "qid": "ba012e2f121477e48a5a38fa017e6724",
+        "question": "Under what amendment did the US suspend military sales to the country with prompt launch status that has a moon on its flag?",
+        "answers": [
+          "Glenn Amendment"
+        ],
+        "supporting_parts": [
+          "text",
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "33e3e5a90408e1e2874b943633fd1f17",
+            "doc_part": "text"
+          },
+          {
+            "doc_id": "47cd2c2a476765a86b721302f506eec1",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "Compose(TextQ,ImageListQ)"
+      },
+      {
+        "dataset_index": 21255,
+        "qid": "be1e0aa9ea79ecd5087fce3dee658641",
+        "question": "Was Martin or the County name that has a large pole in front of the building and a flag at the top left, the one with higher Twps in counties of Southwestern Indiana?",
+        "answers": [
+          "Posey"
+        ],
+        "supporting_parts": [
+          "table",
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "cb583ac5923841bd6b7bb8402b38a543",
+            "doc_part": "table"
+          },
+          {
+            "doc_id": "daf8755eed513d1cde3d4533446479b4",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "Compare(Compose(TableQ,ImageQ),TableQ)"
+      },
+      {
+        "dataset_index": 1248,
+        "qid": "7cf453329ce5cfe95d83caed3489698d",
+        "question": "What was the year for the television show featuring Uriel Tel Toro that featured a young child on the poster?",
+        "answers": [
+          "2009"
+        ],
+        "supporting_parts": [
+          "table",
+          "image"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "de13bf5fd11f133b71681e99a86c6685",
+            "doc_part": "table"
+          },
+          {
+            "doc_id": "0aefcc32e7b242826c6ce057ddfe99b1",
+            "doc_part": "image"
+          }
+        ],
+        "question_type": "Compose(TableQ,ImageListQ)"
+      }
+    ],
+    "no_image": [
+      {
+        "dataset_index": 14115,
+        "qid": "a65c0ac96e375c00c76ee814a8d21777",
+        "question": "what was the most money won on jeopardy",
+        "answers": [
+          "Brad Rutter"
+        ],
+        "supporting_parts": [
+          "text"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "c5a782b83c29f267f187e5d9efd4c7be",
+            "doc_part": "text"
+          }
+        ],
+        "question_type": "TextQ"
+      },
+      {
+        "dataset_index": 4904,
+        "qid": "259b2bee77bc7912843a700036d9080b",
+        "question": "What Latin style was the song made popular by Gloria Estefan in September of 1995?",
+        "answers": [
+          "Tropical"
+        ],
+        "supporting_parts": [
+          "table",
+          "table"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "8a028caf3623a0c6cf8769689ed20143",
+            "doc_part": "table"
+          },
+          {
+            "doc_id": "8a028caf3623a0c6cf8769689ed20143",
+            "doc_part": "table"
+          }
+        ],
+        "question_type": "TableQ"
+      },
+      {
+        "dataset_index": 18175,
+        "qid": "14bb47441ad7174af5a3a55364b7f8b5",
+        "question": "In what region that was also in the release history of Parade of the Athletes in 2004 was \"The Return of a Man Called Horse\" filmed?",
+        "answers": [
+          "Mexico and Latin America"
+        ],
+        "supporting_parts": [
+          "text",
+          "text",
+          "text",
+          "table"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "0b37d98d0f6cdce3cadcaa6122e2b3c2",
+            "doc_part": "text"
+          },
+          {
+            "doc_id": "0b37d98d0f6cdce3cadcaa6122e2b3c2",
+            "doc_part": "text"
+          },
+          {
+            "doc_id": "0b37d98d0f6cdce3cadcaa6122e2b3c2",
+            "doc_part": "text"
+          },
+          {
+            "doc_id": "1adefda1cb3ec0b1c25110244f6f4bbe",
+            "doc_part": "table"
+          }
+        ],
+        "question_type": "Intersect(TableQ,TextQ)"
+      },
+      {
+        "dataset_index": 16453,
+        "qid": "1a2f90608d7190e90974bb8cb010fbfa",
+        "question": "Who realeased this American comedy film  starring an American actress who played supporting roles in films including \"East of Eden\", \"Five Easy Pieces\", \"Resurrection\"?",
+        "answers": [
+          "Magnolia Pictures"
+        ],
+        "supporting_parts": [
+          "text",
+          "text"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "6a84b55e18e4e7a4b103e1c5b55761e9",
+            "doc_part": "text"
+          },
+          {
+            "doc_id": "57856ed3f5c39179ce8aa86921c90998",
+            "doc_part": "text"
+          }
+        ],
+        "question_type": "TextQ"
+      },
+      {
+        "dataset_index": 17826,
+        "qid": "a723bfa1a1a0f653396d18869a79fbf3",
+        "question": "when does callie come to grey's anatomy",
+        "answers": [
+          "in season two"
+        ],
+        "supporting_parts": [
+          "text"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "9e48ee82d4ce55dd367e669fe3381705",
+            "doc_part": "text"
+          }
+        ],
+        "question_type": "TextQ"
+      },
+      {
+        "dataset_index": 13644,
+        "qid": "49efb86c8a9f2c9ef2e3db71e5600049",
+        "question": "State of Grace and Begin Again were songs on which album released to the iTunes Store by American singer-songwriter Taylor Swift in 2012?",
+        "answers": [
+          "\"Red\""
+        ],
+        "supporting_parts": [
+          "text",
+          "text"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "8dd02c9e3f8d0237c7bdce46d3845730",
+            "doc_part": "text"
+          },
+          {
+            "doc_id": "5c3a3371fb2810ba83826e3029ce1cdf",
+            "doc_part": "text"
+          }
+        ],
+        "question_type": "TextQ"
+      },
+      {
+        "dataset_index": 10366,
+        "qid": "046e641baf90bedda8342f76af2a89cd",
+        "question": "Did Bay City Rollers sing the best-selling Birtish music album Once Upon a Star in 1975?",
+        "answers": [
+          "Yes"
+        ],
+        "supporting_parts": [
+          "table"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "c8f45ee92ae5a21bafdb44155f4496f0",
+            "doc_part": "table"
+          }
+        ],
+        "question_type": "TableQ"
+      },
+      {
+        "dataset_index": 5429,
+        "qid": "1069acccb11dd7a08cac4cb7704f7461",
+        "question": "when does the 100 season 5 episodes come out",
+        "answers": [
+          "April 24, 2018"
+        ],
+        "supporting_parts": [
+          "text"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "97a37b95e828db838a3dceef96cf0044",
+            "doc_part": "text"
+          }
+        ],
+        "question_type": "TextQ"
+      },
+      {
+        "dataset_index": 11156,
+        "qid": "7598b0fc31fa733653a383a1facce193",
+        "question": "when did the first android smartphone come out",
+        "answers": [
+          "September 2008"
+        ],
+        "supporting_parts": [
+          "text"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "8c9419c84b40cf2494e0ee6654b89dea",
+            "doc_part": "text"
+          }
+        ],
+        "question_type": "TextQ"
+      },
+      {
+        "dataset_index": 14888,
+        "qid": "4378b710860c5fc4f74e7a0d50ef3035",
+        "question": "Which H. Jon Benjamin film role was most recent, Dance Instructor or The Torah/Uncle Irving?",
+        "answers": [
+          "Dance Instructor"
+        ],
+        "supporting_parts": [
+          "table",
+          "table"
+        ],
+        "supporting_context": [
+          {
+            "doc_id": "9a84577bf5c38e39bd3bfd41e6476581",
+            "doc_part": "table"
+          },
+          {
+            "doc_id": "9a84577bf5c38e39bd3bfd41e6476581",
+            "doc_part": "table"
+          }
+        ],
+        "question_type": "TableQ"
+      }
+    ]
+  }
+}

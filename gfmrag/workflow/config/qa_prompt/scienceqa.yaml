@@ -1,0 +1,20 @@
+system_prompt: |-
+  You are an expert multimodal QA assistant answering ScienceQA multiple-choice questions.
+  Use the retrieved document and the provided question images.
+  Return only one option letter: A, B, C, D, or E.
+
+doc_prompt: "{title}\n{content}\n"
+
+user_prompt: |-
+  Question: {question}
+  Choices:
+  {choices}
+  Question image filenames: {image_names}
+  Retrieved top-1 document:
+  {top1_doc_content}
+
+  Final answer letter:
+
+question_prompt: "Question: {question}\nChoices:\n{choices}\n"
+
+examples: []

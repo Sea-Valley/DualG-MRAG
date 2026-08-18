@@ -1,0 +1,24 @@
+DualG-MRAG
+Copyright 2026 DualG-MRAG authors
+
+This product includes software developed for DualG-MRAG
+(Dual-tier Graph Retrieval-Augmented Generation for Multimodal QA).
+
+This repository is derived from GFM-RAG
+(https://github.com/RManLuo/gfm-rag), Copyright (c) 2025 Linhao Luo and
+contributors, licensed under the Apache License, Version 2.0. The GFM
+retriever, training loop, pipeline scaffolding, and package structure are
+inherited from GFM-RAG, and the package name "gfmrag" is retained for
+compatibility.
+
+The gfmrag/ultra/ directory vendors code from ULTRA
+(https://github.com/DeepGraphLearning/ULTRA), Copyright (c) DeepGraphLearning
+and contributors, licensed under the MIT License.
+
+The SimGRAG-style query-graph pattern matching in gfmrag/query_pattern/
+and gfmrag/kg_construction/micro_matcher/ is adapted from SimGRAG
+(https://github.com/YZ-Cai/SimGRAG).
+
+Design inspiration was additionally drawn from HippoRAG
+(https://github.com/OSU-NLP-Group/HippoRAG) and Microsoft GraphRAG
+(https://github.com/microsoft/graphrag).

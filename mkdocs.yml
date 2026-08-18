@@ -1,0 +1,153 @@
+theme:
+  icon:
+    logo: material/home
+  name: material
+  palette:
+    - media: "(prefers-color-scheme)"
+      scheme: default
+      toggle:
+        icon: material/brightness-4
+        name: "Switch to light mode"
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-5
+        name: "Switch to dark mode"
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-auto
+        name: "Switch to system preference"
+  features:
+    - navigation.instant # pages behave like a single-page app: search and navigation happen in-place
+    - navigation.tabs # tabs at the top of the page
+    - navigation.tracking # highlight the current page in the nav while scrolling
+    - navigation.sections # group the nav into sections
+    - navigation.expand # expand the nav by default
+    - navigation.prune # render only the current page's nav
+    - navigation.path # show the current page path
+    - navigation.tabs.sticky # keep tabs sticky at the top
+    - toc.follow # sidebar follows while scrolling
+    - navigation.top # back-to-top button
+    - search.suggest # search autocomplete suggestions
+    - search.highlight # highlight search results
+    - search.share # share search results
+    - navigation.footer # footer links to the next chapter
+    - content.code.copy # copy button on code blocks
+
+markdown_extensions:
+  - admonition # admonition syntax
+  - def_list
+  - footnotes
+  - abbr
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - md_in_html
+  - pymdownx.arithmatex: # LaTeX support
+      generic: true
+  - toc:
+      permalink: true # keep permalink at the current heading
+      toc_depth: 3 # TOC depth
+  - pymdownx.highlight: # code block highlighting
+      anchor_linenums: true
+      linenums: true # show line numbers
+      use_pygments: true # syntax highlighting
+      pygments_lang_class: true
+      auto_title: true # show the language name
+      linenums_style: pymdownx-inline # inline line numbers so copying excludes them
+  - pymdownx.betterem # better emphasis rendering, e.g. **text**
+  - pymdownx.caret # superscript/subscript
+  - pymdownx.mark # superscript/subscript
+  - pymdownx.tilde # superscript/subscript
+  - pymdownx.keys # render key combinations
+  - pymdownx.critic
+  - pymdownx.details # collapsible blocks; ??? note makes an admonition collapsible
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.magiclink # auto-detect links
+  - pymdownx.smartsymbols # smart symbols
+  - pymdownx.snippets # snippets
+  - pymdownx.tasklist:
+      custom_checkbox: true # custom checkboxes
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences: # Mermaid support in code blocks
+      custom_fences: # Mermaid support
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+  - meta # custom title tags etc. at the top of Markdown files
+  - tables
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+# Custom content below; do not modify the plugin/feature setup above
+
+site_name: DualG-MRAG
+nav:
+  - Workflow:
+      - Data Preparation: workflow/data_preparation.md
+      - Index Construction: workflow/kg_index.md
+      - MMKG Stage1 Schema: workflow/mmkg_stage1_schema.md
+      - Per-Dataset Configurations: workflow/dataset_configs.md
+      - Retriever Training: workflow/training.md
+  - Config:
+      - KG-index Config: config/kg_index_config.md
+      - Retriever Config: config/gfmrag_retriever_config.md
+      - KG Pre-training Config: config/gfmrag_pretrain_config.md
+      - QA Fine-tuning Config: config/gfmrag_finetune_config.md
+      - NER Model Config: config/ner_model_config.md
+      - Entity Linking Model Config: config/el_model_config.md
+      - OpenIE Model Config: config/openie_model_config.md
+      - Document Ranker Config: config/doc_ranker_config.md
+      - Text Embedding Config: config/text_embedding_config.md
+  - API Reference:
+      - KG-index Constructor: api/kg_indexer.md
+      - GFM Retriever: api/gfmrag_retriever.md
+      - GNN Models: api/models.md
+      - Document Ranker: api/doc_ranker.md
+      - Datasets: api/datasets.md
+      - Large Language Models: api/llms.md
+      - Text Embedding Models: api/text_emb_models.md
+      - Loss Functions: api/losses.md
+      - Prompt Builder: api/prompt_builder.md
+      - Evaluator: api/evaluator.md
+      - KG Construnction:
+          - KG Constructor: api/kg_construnction/kg_constructor.md
+          - QA Constructor: api/kg_construnction/qa_constructor.md
+          - NER Model: api/kg_construnction/ner_model.md
+          - Entity Linking Model: api/kg_construnction/el_model.md
+          - OpenIE Model: api/kg_construnction/openie_model.md
+repo_name: DualG-MRAG
+
+plugins:
+  - search # built-in plugin; adds a search bar to the header
+  - autorefs
+  - same-dir
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_root_heading: true
+            show_symbol_type_heading: true
+            show_source: true
+            show_root_toc_entry: false
+          import:
+            - url: https://docs.python.org/3/objects.inv
+              domains: [std, py]
+
+extra:
+  version:
+    provider: mike
+    alias: true

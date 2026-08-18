@@ -1,0 +1,22 @@
+allowed_labels: ["0", "2", "5"]
+category_labels:
+  no_image: "0"
+  image_and_others: "2"
+  image_only: "5"
+category_order: [image_only, image_and_others, no_image]
+few_shot:
+  image_only: 8
+  image_and_others: 8
+  no_image: 8
+prompt_prefix: |-
+  You are an MMQA question classifier. Decide whether answering the question requires image evidence. The output label must be one of 0, 2, 5.
+  Label definitions:
+  0 = does not need image (only text/table or other non-image evidence is needed)
+  2 = needs image together with other documents (text/table, etc.)
+  5 = only needs image
+  Decision rules (important):
+  1) If the question can be answered using only visible information in the image (color, shape, number of people, spatial relationships, visibility, etc.), prefer label 5.
+  2) If the question requires both the image and text/table knowledge, label it 2.
+  3) If the question is essentially factual QA, time/place/person relations, or statistical comparison that does not require viewing an image, label it 0.
+  4) If the question can be answered with general encyclopedic text alone (even if it mentions visually identifiable objects), label it 0.
+  You must output exactly one character: 0 or 2 or 5. Do not output anything else.

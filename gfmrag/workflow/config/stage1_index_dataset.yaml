@@ -1,0 +1,50 @@
+hydra:
+  run:
+    dir: outputs/kg_construction/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+defaults:
+  - _self_
+  - ner_model: llm_ner_model
+  - openie_model: llm_openie_model
+  - el_model: colbert_el_model
+  - multimodal_extractor: rule_based_multimodal_extractor
+
+dataset:
+  root: ./data
+  data_name: mmqa
+
+kg_constructor:
+  _target_: gfmrag.kg_construction.KGConstructor
+  open_ie_model: ${openie_model}
+  ner_model: ${ner_model}
+  el_model: ${el_model}
+  multimodal_extractor: ${multimodal_extractor}
+  root: tmp/kg_construction
+  num_processes: 1
+  cosine_sim_edges: True
+  threshold: 0.8
+  max_sim_neighbors: 100
+  add_title: True
+  force: False
+  enable_multimodal: False
+  enable_micro_kg: False
+  modalities: [image, table]
+  micro_to_macro_topk: 3
+  micro_to_macro_threshold: 0.75
+  micro_conf_threshold: 0.5
+  unaligned_conf_threshold: 0.7
+  micro_relation_whitelist: []
+  min_entity_alnum_len: 2
+  merge_micro_into_kg: False
+  enable_image_macro_description: False
+  max_image_desc_per_doc: 3
+  max_image_desc_chars: 240
+  macro_image_desc_use_cache: True
+
+qa_constructor:
+  _target_: gfmrag.kg_construction.QAConstructor
+  root: tmp/qa_construction
+  ner_model: ${ner_model}
+  el_model: ${el_model}
+  num_processes: 1
+  force: False

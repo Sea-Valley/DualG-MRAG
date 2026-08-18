@@ -1,0 +1,17 @@
+_target_: gfmrag.kg_construction.multimodal_extractor.RuleBasedMultimodalExtractor
+use_vlm_for_images: true
+fallback_to_caption_when_vlm_fails: true
+require_vlm_triples: false
+failure_log_path: null
+failure_log_preview_chars: 800
+image_model_name_or_path: Qwen/Qwen3-VL-8B-Instruct
+image_tensor_parallel_size: 2
+image_gpu_memory_utilization: 0.92
+image_max_num_batched_tokens: 32768
+image_max_model_len: 32768
+image_allowed_local_media_path: null
+image_prompt: "You are building a micro-KG for multimodal retrieval. Given one image, extract concise factual triples from visual evidence. Return strict JSON only: {\"triples\": [[head, relation, tail], ...]}. Rules: 1) Use concrete entities and relations. 2) If identity is clear, use canonical names. 3) Include visual-attribute triples that help matching. 4) Do not output explanation text."
+macro_image_description_prompt: "Write 3-5 short factual sentences for retrieval/OpenIE. You may use both image evidence and metadata (doc_title, image_title, image_caption). Prefer reusing concrete nouns/entities from image_title/image_caption in the output. Use OpenIE-friendly atomic sentences (one fact per sentence, simple subject-predicate-object). Avoid vague placeholders like 'object' or 'thing' if title/caption provides a specific noun. Output plain text only."
+max_macro_description_chars: 240
+default_image_confidence: 0.7
+default_table_confidence: 0.8

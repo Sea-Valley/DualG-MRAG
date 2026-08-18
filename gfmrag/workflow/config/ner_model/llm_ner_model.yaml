@@ -1,0 +1,4 @@
+_target_: gfmrag.kg_construction.ner_model.LLMNERModel
+llm_api: qwen_vl_vllm
+model_name: Qwen/Qwen3-VL-8B-Instruct
+max_tokens: 300

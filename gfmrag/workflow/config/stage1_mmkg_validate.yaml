@@ -1,0 +1,15 @@
+hydra:
+  run:
+    dir: outputs/mmkg_validate/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+defaults:
+  - _self_
+
+dataset:
+  root: ./data
+  data_name: mmqa
+
+thresholds:
+  cross_tier_coverage_warn: 0.6
+  unresolved_micro_ratio_warn: 0.4
+  duplicate_micro_ratio_warn: 0.3

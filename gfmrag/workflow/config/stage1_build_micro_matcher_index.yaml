@@ -1,0 +1,18 @@
+hydra:
+  run:
+    dir: outputs/micro_matcher_index/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+defaults:
+  - _self_
+  - micro_matcher: simgrag_matcher
+
+dataset:
+  root: ./data
+  data_name: mmqa
+
+input:
+  micro_kg_filename: micro_kg.jsonl
+
+output:
+  write_summary: true
+  summary_filename: micro_matcher_index_summary.json

@@ -1,0 +1,475 @@
+{
+  "meta": {
+    "source": "WebQA train_val split (official release, WebQA_train_val.json)",
+    "excluded_test_file": "WebQA test split used for the 1000-question evaluation subset",
+    "split_filter": "any",
+    "seed": 42,
+    "scanned": 41732,
+    "skipped_overlap": 1000,
+    "note": "Examples were sampled from the full train_val split (any split) with the 1000-question evaluation subset excluded.",
+    "skipped_split": 0,
+    "skipped_mixed": 0,
+    "available": {
+      "image_only": 20945,
+      "no_image": 19787
+    },
+    "sampled": {
+      "image_only": 32,
+      "no_image": 32
+    }
+  },
+  "categories": {
+    "image_only": [
+      {
+        "qid": "d5c1d15e0dba11ecb1e81171463288e9",
+        "question": "Do Quality Cheese Inc. and Lowell's, both at Pike Place Market, have the same color logo?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5bdb0420dba11ecb1e81171463288e9",
+        "question": "Is the ceiling over the tracks at the Metro station in Dupont Circle the same color as the sidewalks across the street from the Row houses located at 1757–1771 T Street, N.W. in the Dupont Circle neighborhood?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5c619940dba11ecb1e81171463288e9",
+        "question": "What replaced the stars from the 1852 gold dollar on the 1888 gold dollar?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5c5621a0dba11ecb1e81171463288e9",
+        "question": "Did the competitors in the 1st heat of the 2nd round of the Women's 100m sprint event at the 2008 Olympics wear the same type of identification on the front of their uniforms as the ones worn by the competitors in the Women's 5000m event at the 2012 Olympics?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5c4e1640dba11ecb1e81171463288e9",
+        "question": "What grows to the right of the front entrance of the Tinley Park Public Library?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5c2c7120dba11ecb1e81171463288e9",
+        "question": "Are the tops of the buildings of the Midtown Atlanta skyline visible from Piedmont Park all pointed?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5c187bc0dba11ecb1e81171463288e9",
+        "question": "Which fungus has a deeper hole, enabling more water to be held; Cantharellus cibarius or Entoloma hebes?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5cccae60dba11ecb1e81171463288e9",
+        "question": "How many trees are in the foreground of the Near Sydenham Hill painting by Camille Pissarro?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5c107ce0dba11ecb1e81171463288e9",
+        "question": "Between the Charles T. Porch Center in Alexander City, Alabama and Evanston Civic Center, which building has more chimneys?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5cddfc60dba11ecb1e81171463288e9",
+        "question": "Is the metal fence surrounding the Beijing National Stadium or the red building outside of the stadium taller?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5c9be000dba11ecb1e81171463288e9",
+        "question": "How many windows are above the entrance of the Fenchurch Street railway station?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5be2a040dba11ecb1e81171463288e9",
+        "question": "What is the main color of Vanellus coronatus?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5be04d40dba11ecb1e81171463288e9",
+        "question": "What shapes of pillars can be found by the bookcases in Clementinum Library?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5c13f500dba11ecb1e81171463288e9",
+        "question": "Is the vase that the roses are in on the dresser in the painting \"Elizabeth Alexeevna with mirror\" sitting flat or on feet?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5c4c6160dba11ecb1e81171463288e9",
+        "question": "What sits on top of the spire of the Shanghai exhibition center spire ?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5c51a120dba11ecb1e81171463288e9",
+        "question": "Which culture wears the wider objects around their neck as part of their traditional garb, the Masai or the Indian Garo?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5cbd2580dba11ecb1e81171463288e9",
+        "question": "What type of power do both the SanFran 14TrSF trolleybus and the Third light rail vehicle run off of?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5ce28960dba11ecb1e81171463288e9",
+        "question": "Which portion of the structure of Les Halles lets sunlight in?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5bdcafa0dba11ecb1e81171463288e9",
+        "question": "Between Olympic stadium in Barcelona, and the stadium where the 1992 Paralympic games were held, which has a digital clock at the top of the stadium?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5cd4c960dba11ecb1e81171463288e9",
+        "question": "Is there more than one entrance door to the front of the Old Slave Mart Museum in the French Quarter in Charleston, SC?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5c448800dba11ecb1e81171463288e9",
+        "question": "Does the Bibi Heybat Mosque have fewer than 10 windows?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5ccc8340dba11ecb1e81171463288e9",
+        "question": "How many red stripes are on the top of the Vogue theater sign?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5c9af280dba11ecb1e81171463288e9",
+        "question": "How many modern sculptures are there in the Kálmán Imre Square?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5c4cff80dba11ecb1e81171463288e9",
+        "question": "Which fungus has darker stems; Marasmius plicatulus or Amanita phalloides?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5ca6ec20dba11ecb1e81171463288e9",
+        "question": "How many solar panels are on each side of the Soyuz MS-01 spacecraft?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5cdd9cc0dba11ecb1e81171463288e9",
+        "question": "Does the Universal Studios theme park in Florida have a life size replica of a shark?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5c633de0dba11ecb1e81171463288e9",
+        "question": "Do both the Lion Statue on Generali building in Jerusalem and the Winged lion monument in Prague hold their paw on a book?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5bc17fa0dba11ecb1e81171463288e9",
+        "question": "What is in the left hand of the statue of Apostle Bartholomew?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5c345660dba11ecb1e81171463288e9",
+        "question": "Can you see the Cosmopolitan of Las Vegas from the Aria Resort and Casino?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5c9c2740dba11ecb1e81171463288e9",
+        "question": "How do you reach the entry to both the National Museum of Natural History and the Field Museum of Natural History?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5c7b2220dba11ecb1e81171463288e9",
+        "question": "What shape is the largest window on Bnai Sholom in Huntington WV?",
+        "supporting_parts": [
+          "image"
+        ]
+      },
+      {
+        "qid": "d5c632620dba11ecb1e81171463288e9",
+        "question": "Is the Tenue traditionnelle d'aparat du chef more or less colorful than the costumes worn by the 9–10-year-old boys of the Yao tribe in Malawi participating in circumcision and initiation rites?",
+        "supporting_parts": [
+          "image"
+        ]
+      }
+    ],
+    "no_image": [
+      {
+        "qid": "d5d377ce0dba11ecb1e81171463288e9",
+        "question": "What series is set in the city of Lexington, Kentucky, and the hill country of eastern Kentucky featured Margo Martindale as Mags Bennett?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d4fd1a0dba11ecb1e81171463288e9",
+        "question": "The medium-sized Coburn mineral sands deposit in Western Australia is 1.1% what, which in geology is a mineral with a density that is greater than 2.9 g/cm 3?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d821d40dba11ecb1e81171463288e9",
+        "question": "The state of Mississippi controls at least 11 exclaves on the west bank of the Mississippi River in what state that Dr. Timothy Burr migrated to from Mt. Vernon, Ohio?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d1f2140dba11ecb1e81171463288e9",
+        "question": "Was Prince Ludwig Franz Karl Lamoral Joseph born before or after the Palais Thurn und Taxis was completed?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d1b89e0dba11ecb1e81171463288e9",
+        "question": "Did Harry Forrester ever play under Manager Uwe Rosler on the Brentford Bees?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d938bc0dba11ecb1e81171463288e9",
+        "question": "What is the thoracoacromial artery and which tissue does it pierce?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d1d1760dba11ecb1e81171463288e9",
+        "question": "What is the first name of the maternal grandmother of the actress whose paternal grandfather was George Dolenz?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d8b0860dba11ecb1e81171463288e9",
+        "question": "How many communes d'arrondissement are in the capital city of Senegal?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d8529e0dba11ecb1e81171463288e9",
+        "question": "The Membrane-bound transcription factor site-1 protease encodes a member of what family which includes proteases that process protein precursors?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5dfb32c0dba11ecb1e81171463288e9",
+        "question": "The Latino-Faliscan or Latino-Venetic languages were spoken by the Latino-Faliscan from 1200 BC by the people of what country that is the 3d most populous of the EU and is located in south central Europe?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d639640dba11ecb1e81171463288e9",
+        "question": "The Llangernyw Yew and Old Tjikko are both what?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d085aa0dba11ecb1e81171463288e9",
+        "question": "Is the nickname Davo an alternate form of the Welsh name Dafydd?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5db4d140dba11ecb1e81171463288e9",
+        "question": "What mountain range is to the south of the region where the Alaskan Athabascans live?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5ddcb160dba11ecb1e81171463288e9",
+        "question": "Out of the 8 planetary objects in the gravitationally bound system of the Sun and the objects that orbit it, which is the furthest from the Sun?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d27b6c0dba11ecb1e81171463288e9",
+        "question": "What kind of thriller has Columbus Circle been described as?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d92ffc0dba11ecb1e81171463288e9",
+        "question": "Hypogastric and coccygeal are both a type of what?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d163800dba11ecb1e81171463288e9",
+        "question": "Who voiced a leader with eyewear in the first Disney Princess movie to be released?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5de351a0dba11ecb1e81171463288e9",
+        "question": "Alveolar and voiced alveolar affricate are both what?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d6f1560dba11ecb1e81171463288e9",
+        "question": "What old Hebrew script could be classified as a standardized set of basic written symbols or graphemes?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d8c1340dba11ecb1e81171463288e9",
+        "question": "The office that was one of the highest and most important offices of the church's priesthood and was equated by Joseph Smith with Biblical patriarchs from Adam to Abraham, Isaac, and Jacob is part of what religious movement?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5df0d140dba11ecb1e81171463288e9",
+        "question": "What other names are the Companions of the Rass known as and who speculated they were a community in the Azerbaijan region?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d46b340dba11ecb1e81171463288e9",
+        "question": "Regarding the short single-stranded fragment of nucleic acid such as DNA, what kind of complex structure can it form into?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d1296a0dba11ecb1e81171463288e9",
+        "question": "Did the cast of HMS Pinafore begin rehearsals before or after The Gondoliers ceased performing?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d093c40dba11ecb1e81171463288e9",
+        "question": "Does repetition and period have anything to do with the pitch of the song?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d54db00dba11ecb1e81171463288e9",
+        "question": "What is the name of the steak that is cut against the grain from the chuck, shoulder, and usually has a significant amount of marbling?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d6d6a80dba11ecb1e81171463288e9",
+        "question": "Where is the Al Minhad Air base installed that has been described as the United States' best counter-terrorism ally in the Gulf?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d169c00dba11ecb1e81171463288e9",
+        "question": "The study of how to enamel cast iron would fall under what domain of materials science?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d56c280dba11ecb1e81171463288e9",
+        "question": "Who wrote the description of a Mooncalf in the world of the Harry Potter series?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d1ea760dba11ecb1e81171463288e9",
+        "question": "What year were ships Medway, Silverlip and Burutu built and/or launched?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d93a240dba11ecb1e81171463288e9",
+        "question": "The Paraná River and Amapa are both in names of what?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5d6906c0dba11ecb1e81171463288e9",
+        "question": "How long after the death of Eschiva's father did Odo become appointed as bailli of the kingdom?",
+        "supporting_parts": [
+          "text"
+        ]
+      },
+      {
+        "qid": "d5db29740dba11ecb1e81171463288e9",
+        "question": "One of the developers of Minna no Golf later went on to develop what other golf-related games?",
+        "supporting_parts": [
+          "text"
+        ]
+      }
+    ]
+  }
+}

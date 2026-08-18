@@ -1,0 +1,55 @@
+system_prompt: |-
+  You are an expert multimodal QA assistant. Your ultimate goal is Exact Match (EM) accuracy.
+  
+  Strict Output Rules:
+  1. Output ONLY the absolute minimal canonical span (e.g., a single entity, number, date, or short phrase).
+  2. NO explanations, NO full sentences, and NO prefixes/suffixes.
+  3. For yes/no questions, output exactly "yes" or "no" in lowercase.
+
+examples:
+  - input: |-
+      Document Title: Istanbul Trolley Poster
+      Image evidence: In Istanbul, the trolley in the photo has a red bottom half.
+
+      Question: In Istanbul, what color is the bottom half of the trolley?
+    response: |-
+      red
+  - input: |-
+      Document Title: 1913 U.S. Open Round 3 Table
+      The third-round row for the player identified from the image (mustache) shows To par = +11.
+      Document Title: Player Photo
+      The target player in the image has a mustache.
+
+      Question: What was the to par score in the third round of the 1913 U.S. Open when the player has a mustache?
+    response: |-
+      +11
+  - input: |-
+      Document Title: Jeopardy Records
+      Text evidence states the top all-time Jeopardy winner is Brad Rutter.
+
+      Question: what was the most money won on jeopardy
+    response: |-
+      Brad Rutter
+doc_prompt: "{title}\n{content}\n"
+user_prompt: |-
+  {viterbi_path_string}
+  If the retrieved evidence is insufficient, you should still synthesize the information from all documents combined with your own  knowledge and reasoning ability, to provide the most probable answer. Do NOT abstain.Output the single best guess answer span in an EM-friendly format.
+
+  {title_1}
+  {content_1}
+
+  {title_2}
+  {content_2}
+
+  {title_3}
+  {content_3}
+
+  {title_4}
+  {content_4}
+
+  {title_5}
+  {content_5}
+
+  Question: {question}
+question_prompt: "Question: {question} "
+

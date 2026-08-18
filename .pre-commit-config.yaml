@@ -1,0 +1,50 @@
+# Apply to all files without commiting:
+#   pre-commit run --all-files
+# Update this file:
+#   pre-commit autoupdate
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+    -   id: check-ast
+    -   id: check-byte-order-marker
+    -   id: check-case-conflict
+    -   id: check-executables-have-shebangs
+    -   id: check-json
+        exclude: '^data/'
+    -   id: check-yaml
+        args: [--unsafe]
+    -   id: debug-statements
+    -   id: detect-private-key
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+        # Prompt templates are kept byte-identical to the released configs.
+        exclude: '^gfmrag/workflow/config/qa_prompt/'
+    -   id: mixed-line-ending
+-   repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.15.0
+    hooks:
+    -   id: mypy
+        args: [--ignore-missing-imports, --install-types, --non-interactive, --disallow-untyped-defs, --no-namespace-packages]
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.9.10
+    hooks:
+    -   id: ruff
+        args: [--fix, --unsafe-fixes]
+    -   id: ruff-format
+-   repo: https://github.com/asottile/pyupgrade
+    rev: v3.19.1
+    hooks:
+    -   id: pyupgrade
+        args: [--py310-plus]
+-   repo: https://github.com/asottile/blacken-docs
+    rev: 1.19.1
+    hooks:
+    -   id: blacken-docs
+        additional_dependencies: [black>=22.1]
+-   repo: https://github.com/python-poetry/poetry
+    rev: 2.1.1
+    hooks:
+    -   id: poetry-check
+        args: [--lock]
+        files: ^(.*/)?(pyproject\.toml|poetry\.lock)$
